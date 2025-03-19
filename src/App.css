@@ -1,0 +1,175 @@
+/* Main app container: flex column, full height */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+/* Header at top (blue, centered text) */
+.header {
+  background-color: #003399; /* Morgan-ish blue */
+  color: white;
+  text-align: center; /* center the text horizontally */
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Body container: left sidebar + center content horizontally */
+.body-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Left sidebar: blue background, white text */
+.left-sidebar {
+  width: 220px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* "OUR BANK" title in the sidebar */
+.bank-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Navigation items in the sidebar */
+.nav-items {
+  flex: 1; /* push footer-text to bottom */
+  margin-top: 1rem;
+}
+
+.nav-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-items li {
+  margin: 0.8rem 0;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-items li:hover {
+  background-color: #e5ff00;
+}
+
+/* "www.ourbank.com" at the bottom of sidebar */
+.footer-text {
+  margin-top: auto;
+  font-weight: bold;
+}
+
+/* The center content: fill leftover space, white background */
+.center-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f4f7fa; /* subtle off-white for contrast */
+  overflow-y: auto;
+}
+
+/* Footer at bottom (blue or gray) */
+.footer {
+  background-color: #003399;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+/* Basic form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 400px;
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.6rem;
+  background-color: #006994;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #005080;
+}
+
+/* Table styling (transactions) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #fff;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* 
+  Example grids for Home, AboutUs, Services 
+  to create a modern layout 
+*/
+
+/* Home page grid */
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columns */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* About Us page grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Services page grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: start;
+}
+
+.service-card {
+  background-color: #fff;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
